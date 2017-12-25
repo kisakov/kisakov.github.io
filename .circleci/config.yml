@@ -41,4 +41,11 @@ jobs:
 
       - run:
           name: deploy
-          command: ./bin/deploy.sh
+          command: ./bin/deploy.
+
+      - run: gem install html-proofer
+
+      - run:
+          name: Check links and images
+          command: bundle exec htmlproofer --disable-external --assume-extension --empty-alt-ignore ./_site
+
