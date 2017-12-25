@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4
+        environment:
+          USER_NAME: kisakov
+          USER_EMAIL: isakov90@gmail.com
+    steps:
+      - checkout
+      - run:
+          name: setup
+          command: ./bin/setup
+      - run:
+          name: jekyll build
+          command: bundle exec jekyll build
+      - run:
+          name: deploy
+          command: ./bin/deploy
