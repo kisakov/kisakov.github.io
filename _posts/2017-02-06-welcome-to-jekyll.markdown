@@ -7,6 +7,6 @@ categories: jekyll update
 
 ## Hello from Thailand!
 
-Our photo from Thailand!
+Our photo from Thailand!!!
 
-!["Thailand"](/assets/posts/2017-02-06-welcome-to-jekyll/thailand.JPG)
+!["Thailand"](/assets/posts/2017-02-06-welcome-to-jekyll/thailand.jpg)
