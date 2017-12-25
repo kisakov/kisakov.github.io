@@ -19,7 +19,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - jekyll-v2-{{ checksum "Gemfile.lock" }}
+            - jekyll-v2-{{ sed -e '/RUBY/,$d' Gemfile.lock | cksum |  awk '{print $1;}' }}
             - jekyll-v2-
 
       - run:
@@ -27,7 +27,7 @@ jobs:
           command: bundle check || bundle install
 
       - save_cache:
-          key: jekyll-v2-{{ checksum "Gemfile.lock" }}
+          key: jekyll-v2-{{ sed -e '/RUBY/,$d' Gemfile.lock | cksum |  awk '{print $1;}' }}
           paths:
             - vendor/bundle
 
