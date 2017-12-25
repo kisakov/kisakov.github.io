@@ -10,4 +10,3 @@ categories: jekyll update
 Our photo from Thailand
 
 !["Thailand"](/assets/posts/2017-02-06-welcome-to-jekyll/thailand.jpg)
-
