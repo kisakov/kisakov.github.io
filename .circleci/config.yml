@@ -3,20 +3,20 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4
-          environment:
-            USER_NAME: kisakov
-            USER_EMAIL: isakov90@gmail.com
+        environment:
+          USER_NAME: kisakov
+          USER_EMAIL: isakov90@gmail.com
     steps:
       - checkout
       - add_ssh_keys:
-          fingerprints:
-            - "2b:77:eb:0c:4b:cb:52:a8:76:22:6a:9e:ef:47:03:94"
+        fingerprints:
+          - "SO:ME:FIN:G:ER:PR:IN:T"
       - run:
-          name: setup
-          command: ./bin/setup
+        name: setup
+        command: ./bin/setup
       - run:
-          name: jekyll build
-          command: bundle exec jekyll build
+        name: jekyll build
+        command: bundle exec jekyll build
       - run:
-          name: deploy
-          command: ./bin/deploy
+        name: deploy
+        command: ./bin/deploy
