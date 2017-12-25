@@ -9,4 +9,4 @@ categories: jekyll update
 
 Our photo from Thailand on the rock!!!
 
-!["Thailand"](/assets/posts/2017-02-06-welcome-to-jekyll/thailand.jpg)
+!["Thailand"](/assets/posts/2017-02-06-welcome-to-jekyll/thailand.JPG)
