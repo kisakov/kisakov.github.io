@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/circleci-jekyll-v2
     docker:
-      - image: circleci/ruby:2.4.0
+      - image: circleci/ruby:2.4.1
         environment:
           USER_NAME: kisakov
           USER_EMAIL: isakov90@gmail.com
