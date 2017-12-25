@@ -28,5 +28,6 @@ github_username:  jekyll
 markdown: kramdown
 theme: minima
 exclude:
+  - vendor
   - Gemfile
   - Gemfile.lock
