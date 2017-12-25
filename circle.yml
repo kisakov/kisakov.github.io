@@ -1,0 +1,20 @@
+machine:
+  environment:
+    USER_NAME: kisakov
+    USER_EMAIL: isakov90@gmail.com
+  ruby:
+    version: 2.4.0
+
+dependencies:
+  pre:
+    - ./bin/setup
+
+test:
+  post:
+    - bundle exec jekyll build
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./bin/deploy
