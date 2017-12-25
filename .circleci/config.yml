@@ -9,14 +9,14 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-        fingerprints:
-          - "SO:ME:FIN:G:ER:PR:IN:T"
+          fingerprints:
+            - "SO:ME:FIN:G:ER:PR:IN:T"
       - run:
-        name: setup
-        command: ./bin/setup
+          name: setup
+          command: ./bin/setup
       - run:
-        name: jekyll build
-        command: bundle exec jekyll build
+          name: jekyll build
+          command: bundle exec jekyll build
       - run:
-        name: deploy
-        command: ./bin/deploy
+          name: deploy
+          command: ./bin/deploy
