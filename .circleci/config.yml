@@ -36,5 +36,5 @@ jobs:
           command: bundle exec jekyll build
 
       - run:
-          name: Check links and images
-          command: bundle exec htmlproofer --disable-external --assume-extension --empty-alt-ignore ./_site
+          name: deploy
+          command: ./bin/deploy.sh
