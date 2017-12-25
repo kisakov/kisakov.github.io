@@ -1,11 +1,39 @@
+GIT
+  remote: git@github.com:kisakov/jekyll-compose.git
+  revision: e817392ae36c21a11e40bb777322963ecc4fb65b
+  specs:
+    jekyll-compose (0.6.1)
+      jekyll (>= 3.0.0)
+
+GIT
+  remote: git@github.com:kisakov/jekyll-email.git
+  revision: 118cdf25859882b2c23dc6a22380c17af4c16c12
+  specs:
+    jekyll-email (0.6.1)
+      dotenv
+      highline
+      jekyll (~> 3.3)
+      letter_opener
+      mail
+
+GIT
+  remote: git@github.com:kisakov/jekyll-image-resizer.git
+  revision: f1d5e1b2a9e2da791c26ff9f80cfccb05689c0c0
+  specs:
+    jekyll-image-resizer (0.4.0)
+      jekyll (~> 3.3)
+      mini_magick
+
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
+    dotenv (2.2.1)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
+    highline (1.7.10)
     jekyll (3.6.2)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -17,17 +45,26 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 3)
       safe_yaml (~> 1.0)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
     jekyll-watch (1.5.1)
       listen (~> 3.0)
     kramdown (1.16.2)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     liquid (4.0.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
     mercenary (0.3.6)
+    mini_magick (4.8.0)
+    mini_mime (1.0.0)
     minima (2.1.1)
       jekyll (~> 3.3)
     pathutil (0.16.1)
@@ -50,7 +87,12 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-compose!
+  jekyll-email!
+  jekyll-image-resizer!
+  jekyll-paginate
   minima (~> 2.0)
+  tzinfo-data
 
 RUBY VERSION
    ruby 2.4.0p0
