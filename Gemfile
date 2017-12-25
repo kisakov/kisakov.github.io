@@ -20,9 +20,14 @@ gem "minima", "~> 2.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   # gem "jekyll-feed", "~> 0.6"
+   gem 'jekyll-email', git: 'git@github.com:kisakov/jekyll-email.git'
+  # gem 'jekyll-email', path: '../jekyll-email'
+  gem 'jekyll-compose', git: 'git@github.com:kisakov/jekyll-compose.git'
+  # gem 'jekyll-compose', path: '../jekyll-compose'
+  gem 'jekyll-image-resizer', git: 'git@github.com:kisakov/jekyll-image-resizer.git'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem "jekyll-paginate"

@@ -14,6 +14,10 @@ jobs:
           fingerprints:
             - "2b:77:eb:0c:4b:cb:52:a8:76:22:6a:9e:ef:47:03:94"
 
+      - run:
+          name: Which bundler?
+          command: bundle -v
+
       - restore_cache:
           keys:
             - jekyll-v2-{{ checksum "Gemfile.lock" }}
