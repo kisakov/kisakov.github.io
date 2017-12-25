@@ -17,17 +17,21 @@ jobs:
           fingerprints:
             - "2b:77:eb:0c:4b:cb:52:a8:76:22:6a:9e:ef:47:03:94"
 
+      - run: sed -e '/RUBY/,$d' Gemfile.lock > Gemfile.lock.bak
+
       - restore_cache:
           keys:
-            - jekyll-v2-{{ sed -e '/RUBY/,$d' Gemfile.lock | cksum |  awk '{print $1;}' }}
+            - jekyll-v2-{{ checksum "Gemfile.lock.bak" }}
             - jekyll-v2-
 
       - run:
           name: Bundle Install
           command: bundle check || bundle install
 
+      - run: sed -e '/RUBY/,$d' Gemfile.lock > Gemfile.lock.bak
+
       - save_cache:
-          key: jekyll-v2-{{ sed -e '/RUBY/,$d' Gemfile.lock | cksum |  awk '{print $1;}' }}
+          key: jekyll-v2-{{ checksum "Gemfile.lock.bak" }}
           paths:
             - vendor/bundle
 
