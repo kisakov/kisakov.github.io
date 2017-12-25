@@ -34,10 +34,6 @@ git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
 git push -f $ORIGIN_URL gh-pages
 
-# Move back to previous branch.
-git checkout -
-# yarn install --modules-folder ./_assets/yarn
-
 echo "Deployed Successfully!"
 
 exit 0

@@ -49,3 +49,4 @@ jobs:
           name: Check links and images
           command: htmlproofer --disable-external --assume-extension --empty-alt-ignore .
 
+      - run: git checkout -
