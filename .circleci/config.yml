@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/circleci-jekyll-v2
     docker:
-      - image: circleci/ruby:2.4
+      - image: circleci/ruby:2.4.0
         environment:
           USER_NAME: kisakov
           USER_EMAIL: isakov90@gmail.com
@@ -38,7 +38,3 @@ jobs:
       - run:
           name: Check links and images
           command: bundle exec htmlproofer --disable-external --assume-extension --empty-alt-ignore ./_site
-
-      - run:
-          name: deploy
-          command: ./bin/deploy.sh
