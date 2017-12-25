@@ -10,7 +10,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "SO:ME:FIN:G:ER:PR:IN:T"
+            - "2b:77:eb:0c:4b:cb:52:a8:76:22:6a:9e:ef:47:03:94"
       - run:
           name: setup
           command: ./bin/setup
