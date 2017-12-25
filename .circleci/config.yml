@@ -47,5 +47,5 @@ jobs:
 
       - run:
           name: Check links and images
-          command: htmlproofer --disable-external --assume-extension --empty-alt-ignore ./_site
+          command: htmlproofer --disable-external --assume-extension --empty-alt-ignore .
 
